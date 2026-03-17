@@ -1,0 +1,12 @@
+{
+    "nume": "Ion Popescu",
+    "varsta": 30,
+    "casatorit": true,
+    "copii": ["Ana", "Mihai"],
+    "adresa": {
+        "strada": "Strada Exemplu 123",
+        "oras": "Bucuresti",
+        "tara": "Romania"
+    },
+    "telefon": null
+}
