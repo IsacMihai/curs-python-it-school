@@ -1,0 +1,15 @@
+=== REZULTATE PROGRAM ANGAJATI ===
+JSON folosit: c:\Users\mihai\Documents\GitHub\curs-python-it-school\miniproiect\info_angajati1.json
+TXT folosit:  c:\Users\mihai\Documents\GitHub\curs-python-it-school\miniproiect\rezultate.txt
+Angajati incarcati initial: 9
+=== LISTA ANGAJATI ===
+123 | Popescu Ion | 30 | 5000 | HR | mid
+1960101123456 | Popescu Ion | 35 | 9500.0 | IT | senior
+2950505123456 | Ionescu Maria | 29 | 7200.0 | HR | mid
+1800303123456 | Georgescu Andrei | 40 | 11000.0 | IT | senior
+1234303123467 | Pomoja Mircea | 35 | 11000.0 | IT | senior
+1235303123778 | Vasilescu Dan | 39 | 11000.0 | IT | senior
+1253305229865 | Georgescu Andrei | 22 | 7000.0 | HR | senior
+1840239225658 | Ion Oblemenco | 33 | 5500.0 | HR | MID
+2950505123456 | ion omblemenco | 33 | 5500.0 | it | mid
+Iesire... 

@@ -1,0 +1,83 @@
+[
+    {
+        "cnp": "123",
+        "nume": "Popescu",
+        "prenume": "Ion",
+        "varsta": 30,
+        "salar": 5000,
+        "departament": "HR",
+        "senioritate": "mid"
+    },
+    {
+        "cnp": "1960101123456",
+        "nume": "Popescu",
+        "prenume": "Ion",
+        "varsta": 35,
+        "salar": 9500.0,
+        "departament": "IT",
+        "senioritate": "senior"
+    },
+    {
+        "cnp": "2950505123456",
+        "nume": "Ionescu",
+        "prenume": "Maria",
+        "varsta": 29,
+        "salar": 7200.0,
+        "departament": "HR",
+        "senioritate": "mid"
+    },
+    {
+        "cnp": "1800303123456",
+        "nume": "Georgescu",
+        "prenume": "Andrei",
+        "varsta": 40,
+        "salar": 11000.0,
+        "departament": "IT",
+        "senioritate": "senior"
+    },
+    {
+        "cnp": "1234303123467",
+        "nume": "Pomoja",
+        "prenume": "Mircea",
+        "varsta": 35,
+        "salar": 11000.0,
+        "departament": "IT",
+        "senioritate": "senior"
+    },
+    {
+        "cnp": "1235303123778",
+        "nume": "Vasilescu",
+        "prenume": "Dan",
+        "varsta": 39,
+        "salar": 11000.0,
+        "departament": "IT",
+        "senioritate": "senior"
+    },
+    {
+        "cnp": "1253305229865",
+        "nume": "Georgescu",
+        "prenume": "Andrei",
+        "varsta": 22,
+        "salar": 7000.0,
+        "departament": "HR",
+        "senioritate": "senior"
+    },
+    {
+        "cnp": "1840239225658",
+        "nume": "Ion",
+        "prenume": "Oblemenco",
+        "varsta": 33,
+        "salar": 5500.0,
+        "departament": "HR",
+        "senioritate": "MID"
+    },
+    {
+        "cnp": "2950505123456",
+        "nume": "ion",
+        "prenume": "omblemenco",
+        "varsta": 33,
+        "salar": 5500.0,
+        "departament": "it",
+        "senioritate": "mid"
+    }
+]
