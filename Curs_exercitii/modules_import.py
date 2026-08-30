@@ -3,7 +3,8 @@ Module (modules) și pachete (packages) în Python
 '''
 '''
 1. Ce este un modul (module)?
-   - Un modul este un fișier Python (.py) care conține cod (funcții, clase, variabile) ce poate fi importat și folosit în alte fișiere.
+   - Un modul este un fișier Python (.py) care conține cod (funcții, clase, variabile) ce poate fi 
+   importat și folosit în alte fișiere.
    - Exemplu: math.py, util.py
 '''
 '''
@@ -72,7 +73,7 @@ def parse_arguments():
     my_parser = argparse.ArgumentParser(description='Afiseaza nume frumos')
 
     my_parser.add_argument('--nume', type=str, default='Ionescu', help='Nume de familie')
-    my_parser.add_argument('--prenume', type=str, required=True, help='Prenumele omului')
+    my_parser.add_argument('--prenume', type=str, default='Mihai')
 
     args = my_parser.parse_args()
     return args.nume, args.prenume
@@ -85,3 +86,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# ArgumentParser() → creează parser
+# add_argument() → adaugă argumente
+# required=True → argument obligatoriu
+# default= → valoare implicită
+# type=str/int/float → tipul datelor
+# parse_args() → citește argumentele din terminal

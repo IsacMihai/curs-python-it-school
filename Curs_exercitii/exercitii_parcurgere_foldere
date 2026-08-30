@@ -1,0 +1,194 @@
+# '''
+# Exercitii parcurgere foldere:
+# Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza numele tuturor fisierelor cu extensia ".py".
+# Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza calea absoluta a tuturor fisierelor ".txt".
+# Sa se scrie un program care parcurge recursiv un folder si scrie intr-un fisier calea absoluta catre toate fisierele gasite in folderul respectiv.
+# Sa se scrie un program care parcurge recursiv un folder si afiseaza numarul total de fisiere si directoare din acel folder.
+# Sa se scrie un program care primeste un folder si o extensie de fisier de la utilizator si parcurge recursiv folderul
+# pentru a afisa numele tuturor fisierelor care au acea extensie.
+# '''
+
+#1.Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza numele
+#  tuturor fisierelor cu extensia ".py".
+
+# import os
+
+# def cauta_fisierele_py(folder):
+#     #luam toate fisierele si folderele
+#     elemente = os.listdir(folder)
+
+#     for element in elemente:
+
+#         #cream calea completa
+#         cale_completa = os.path.join(folder, element)
+
+#         #verificam daca este fisier
+#         if os.path.isfile(cale_completa):
+
+#             #verificam extensia
+#             if element.endswith('.py'):
+#                 print(cale_completa)
+
+#         #verificam daca este folder
+#         elif os.path.isdir(cale_completa):
+#             cauta_fisierele_py(cale_completa)
+
+
+# folder_user = input('Introdu calea folderului: ')
+
+# cauta_fisierele_py(folder_user)
+
+
+#2.Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza calea 
+# absoluta a tuturor fisierelor ".txt".
+
+# import os
+
+# def cauta_fisierul_txt(folder):
+
+#     #luam toate elementele din folder
+#     elemente = os.listdir(folder)
+
+#     for element in elemente:
+
+#         #cream calea completa
+#         cale_completa = os.path.join(folder, element)
+
+#         #verificam daca este fisier
+#         if os.path.isfile(cale_completa):
+
+#             #verificam daca are extensia .txt
+#             if element.endswith('.txt'):
+
+#                 #transformam in cale absoluta
+#                 cale_absoluta = os.path.abspath(cale_completa)
+
+#                 print(cale_absoluta)
+
+#         #verificam daca este folder
+#         elif os.path.isdir(cale_completa):
+
+#             #apel recursiv
+#             cauta_fisierul_txt(cale_completa)
+
+# folder_user = input('Introdu calea folderului: ')
+
+# cauta_fisierul_txt(folder_user)
+
+
+ #3.Sa se scrie un program care parcurge recursiv un folder si scrie intr-un fisier calea absoluta 
+ # catre toate fisierele gasite in folderul respectiv.
+
+# import os
+
+# def parcurge_folderu(folder, fisier_output):
+
+#     #luam toate elementele
+#     elemente = os.listdir(folder)
+
+#     for element in elemente:
+
+#         #cream calea completa
+#         cale_completa = os.path.join(folder, element)
+
+#         #daca este fisier
+#         if os.path.isfile(cale_completa):
+
+#             #transformam in cale absoluta
+#             cale_absoluta = os.path.abspath(cale_completa)
+
+#             #scriem in fisier
+#             fisier_output.write(cale_absoluta + '\n')
+
+#         #daca este folder
+#         elif os.path.isdir(cale_completa):
+
+#             #apel recursiv
+#             parcurge_folderu(cale_completa, fisier_output)
+
+# folder_user = input('Introdu calea folderului: ')
+
+# #deschidem fisierul de output
+# with open('rezultate.txt','w', encoding='utf-8') as fisier:
+          
+#           parcurge_folderu(folder_user, fisier)
+
+# print('Datele au fost salvate in rezultate.txt')
+
+
+# 4.Sa se scrie un program care parcurge recursiv un folder si afiseaza numarul total de fisiere si 
+# directoare din acel folder.
+
+# import os
+
+# def numara_elemente(folder):
+
+#     fisiere = 0
+#     directoare = 0
+
+#     #luam toate elementele
+#     elemente = os.listdir(folder)
+
+#     for element in elemente:
+
+#         #creem calea completa
+#         cale_completa = os.path.join(folder, element)
+
+#         #verificam daca este fisier
+#         if os.path.isfile(cale_completa):
+
+#             fisiere += 1
+
+#         #verificam daca este folder
+#         elif os.path.isfile(cale_completa):
+           
+#              directoare += 1
+
+#              #apel recursiv
+#              f, d = numara_elemente(cale_completa)
+
+#              fisiere += f
+#              directoare += d
+
+#     return fisiere, directoare
+
+# folder_user = input('Introdu calea folderului: ')
+
+# fisiere, directoare = numara_elemente(folder_user)
+
+# print('Numar fisiere:', fisiere)
+# print('Numar directoare:', directoare)
+
+
+#5.Sa se scrie un program care primeste un folder si o extensie de fisier de la utilizator si parcurge recursiv folderul
+# pentru a afisa numele tuturor fisierelor care au acea extensie.
+
+import os
+
+def cauta_fisiere(folder, extensie):
+
+    #luam toate elementele
+    elemente = os.listdir(folder)
+
+    for element in elemente:
+
+        #creem calea completa
+        cale_completa = os.path.join(folder, element)
+
+        #verificam daca este fisier
+        if os.path.isfile(cale_completa):
+
+            #verifica extensia
+            if element.endswith(extensie):
+                print(element)
+
+        #verificam daca este folder
+        elif os.path.isdir(cale_completa):
+
+               #apel recursiv
+               cauta_fisiere(cale_completa, extensie)
+
+folder_user = input('Introdu calea folderului: ')
+extensia_user = input('Introdu extensia: ')
+
+cauta_fisiere(folder_user, extensia_user)

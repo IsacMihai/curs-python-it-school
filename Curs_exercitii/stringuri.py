@@ -174,6 +174,45 @@ Stringuri goale și conversii:
 # print(var)
 # print(var.strip('$-+'))
 
-var = 'tata mama fratele sora'
-print(var.find('fratele'))
-print(var.find('tata'))
+# var = 'tata mama fratele sora'
+# print(var.find('fratele'))
+# print(var.find('tata'))
+
+# text = 'programare'
+# print(text[0]) # prima litera
+# print(text[-1]) #afiseaza ultima litera
+# print(text[3:7:]) #afiseaza gram
+# print(text[::-1])
+# print(text[0:3:])
+# print(text[-2:])
+# print(text[-3:])
+# print(text[0:11:2])
+# print(text[::-1])
+# print(text[1:-1])
+# vocale = 'aeiou'
+# rezultat = ''
+# # for litera in text:
+# #     if litera in vocale:
+# #         rezultat = rezultat + litera
+#         # print(rezultat)         # scoate doar vocalale din text
+# rezultat = "".join([litera for litera in text if litera in vocale])
+# print(rezultat)
+
+# text = "Ana ARE mere"
+# vocale = 'aeiou'
+# rezultat = ''
+# rezultat = "".join([litera for litera in text if litera in vocale])
+# print(rezultat.lower())
+
+# text = "Ana ARE mere"
+# vocale = 'aeiou'
+# rezultat = ''
+# for litera in text:
+#     if litera in vocale:
+#         print(litera)
+
+# text = 'Python este tare'
+# print(text.find('este'))
+
+# x = [1,2,3]
+# print(sum(x, 5))

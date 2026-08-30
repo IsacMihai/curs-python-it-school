@@ -1,0 +1,176 @@
+# # Sa se scrie un program care tine evidenta elevilor intro-o scoala.Programul sa dispuna de un meniu care ne pune la dispozitie urmatoarele optiuni:
+# # # 1. Adauga elev
+# # 2. Afiseaza elevi existenti
+# # 3. Modificare informatii elev existent
+# # 4. Sterge elev
+# # 5. Cauta elev dupa nume si prenume
+# # 6. Afiseaza elevi in ordinea mediilor
+# # 7. Afiseaza levi cu media peste 8
+# # 8. Afiseaza elevi in ordinea alfabetica
+
+# # Pentru elevi trebuie urmatoarele informatii:
+# # Nume
+# # Prenume
+# # Nota Romana
+# # Nota Matematica
+# # Nota engleaza
+# # Media
+
+
+#Facem meniul print :
+
+print(
+    """
+            1. Adauga elev
+            2. Afiseaza elevi existenti
+            3. Modifica informatii elevi existenti
+            4. Sterge elev
+            5. Cauta elev dupa nume si prenume
+            6. Afiseaza elevi dupa ordinea mediilor
+            7. Afiseaza elevi cu media peste 6
+            8. Afiseaza elevi in ordinea alfabetica
+"""
+)
+
+#Adaugare elevi :
+
+elevi = [{'nume': 'popescu', 'prenume': 'ana', 'nota romana': 6.0, 'nota mate': 7.0, 'nota engl': 8.0, 'media': 7.0},
+         {'nume': 'ilie', 'prenume': 'paul', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engl': 9.0, 'media': 8.0},
+         {'nume': 'Maricica', 'prenume': 'Ioana', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engl': 9.0, 'media': 8.0},
+         {'nume': 'Tudor', 'prenume': 'Marian', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engl': 9.0, 'media': 8.0}
+          ]
+
+# 1. Adauga elev : 
+
+def adauga_elev():
+    nume = input("Nume: ")
+    prenume = input("Prenume: ")
+    nota_romana = float(input("Nota romana: "))
+    nota_mate = float(input("Nota mate: "))
+    nota_engl = float(input("Nota engl: "))
+    elev = {
+        "nume": nume,
+        "prenume": prenume,
+        "nota romana": nota_romana,
+        "nota mate": nota_mate,
+        "nota engl": nota_engl,
+        "media": calculeaza_media(nota_romana, nota_mate, nota_engl)
+    }
+    elevi.append(elev)
+
+def calculeaza_media(nota_romana, nota_mate, nota_engl):
+    x = round((nota_romana + nota_mate + nota_engl)/3,2)
+    return x
+
+def ia_media(elev):
+    return elev["media"]
+
+def ia_nume(elev):
+    return elev["nume"]
+
+#2. Afiseaza elevi existenti :
+
+def afiseaza_elevi():
+    for elev in elevi:
+        print(
+            f"{elev['nume']} {elev['prenume']} | "
+            f"Romana: {elev['nota romana']} | "
+            f"Mate: {elev['nota mate']} | "
+            f"Engl: {elev['nota engl']} | "
+            f"Media: {elev['media']} | "
+       )
+
+
+# 3. Modificare informatii elev existent :
+
+def modificare():
+    nume = input("Ce nume sa modific: ")
+    prenume = input("Ce prenume sa modific: ")
+
+    for elev in elevi:
+        if elev['nume'] == nume and elev['prenume'] == prenume:
+            elev['nota romana'] = float(input("Noua nota la romana: "))
+            elev['nota mate'] = float(input("Noua nota la mate: "))
+            elev['nota engl'] = float(input("Noua nota la engl: "))
+
+            elev['media'] = calculeaza_media(
+                elev['nota romana'],
+                elev['nota mate'],
+                elev['nota engl']
+            )
+            print("Date modificate cu success!")
+            return
+    print("Elevul nu a fost gasit!")
+
+# 4. Sterge elev :
+
+def sterge_elevi():
+    nume = input("Ce nume vrei sa stergi ?")
+    prenume = input("Ce prenume vrei sa stergi ?")
+    for elev in elevi:
+        if elev['nume'] == nume and elev['prenume'] == prenume:
+            elevi.remove(elev)
+            print("A fost sters")
+            return
+    print("Elevul nu a fost gasit!")
+
+# 5. Cauta elev dupa nume si prenume
+
+def cauta_elevi():
+    nume = input("Ce nume vrei ?")
+    prenume = input("Ce prenume vrei ?")
+    for elev in elevi:
+        if elev["nume"] == nume and elev["prenume"] == prenume:
+            print(f"{elev['nume']}{elev['prenume']} | "
+                  f"Romana: {elev['nota romana']} | "
+                  f"Mate: {elev['nota mate']} | "
+                  f"Engl: {elev['nota engl']} | "
+                  f"Media: {elev['media']} ")
+            return
+    print('Elevul nu a fost gasit')
+
+# 6. Afiseaza elevi in ordinea mediilor : 
+
+def afiseaza_media_crescator():
+    elevi_sortati = sorted(elevi, key=ia_media)
+    for elev in elevi_sortati:
+        print(f"{elev['nume']}{elev['prenume']} | Media: {elev['media']}")
+
+# 7. Afiseaza levi cu media peste 5 :
+
+def media_5():
+    for elev in elevi:
+            if elev['media'] >= 5:
+                print(f"{elev['nume']}{elev['prenume']} | Media: {elev['media']}")
+
+
+# 8. Afiseaza alfabetic numele :
+
+def afiseaza_alfabetic():
+    elevi_sortati = sorted(elevi, key=ia_nume)
+    for elev in elevi_sortati:
+        print(f"{elev['nume']}{elev['prenume']}")
+
+#Meniu cu While true :
+
+while True:
+    optiune = input('Alege optiune: ')
+    if optiune == '0':
+        print('Ai iesit din sistem')
+        break
+    if optiune == '1':
+        adauga_elev()
+    if optiune == '2':
+        afiseaza_elevi()
+    if optiune == '3':
+        modificare()
+    if optiune == '4':
+        sterge_elevi()
+    if optiune == '5':
+        cauta_elevi()
+    if optiune == '6':
+        afiseaza_media_crescator()
+    if optiune == '7':
+        media_5()
+    if optiune == '8':
+        afiseaza_alfabetic()

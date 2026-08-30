@@ -23,7 +23,8 @@ Denumirea variabilelor:
     * Numele de variabile sunt “case-sensitive”
         - obiect, Obiect, OBIECT - sunt 3 variabile diferite
 
-    * Un nume de “keyword” din Python NU poate fi folosit ca nume de variabila (def, class, if, else, import, etc)
+    * Un nume de “keyword” din Python NU poate fi folosit ca nume de variabila (def, class, if, else, 
+    import, etc)
 
     * Se recomanda folosirea literelor mici si _ pentru a separa cuvintele (Sanke Case)
       (nume_familie_daniel_neamtiu)

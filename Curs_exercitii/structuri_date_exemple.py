@@ -2,7 +2,8 @@
 Structuri de date în Python
 
 1. Liste (list)
-    - O listă este o colecție ordonată, modificabilă(mutable), care permite elemente duplicate, indexabila.
+    - O listă este o colecție ordonată, modificabilă(mutable), care permite elemente duplicate, 
+    indexabila.
 
     - Se definește cu paranteze pătrate: [ ] sau folosind funcția list().
 
@@ -29,7 +30,8 @@ Structuri de date în Python
       - zip(iter1, iter2, ...) - combină mai multe iterabile într-un singur iterabil de tupluri
 
       - list comprehension - sintaxă pentru a crea liste noi din iterabile existente
-            Ex: [x**2 for x in range(10) if x % 2 == 0]  # creeaza o lista cu pătratele numerelor pare de la 0 la 9
+            Ex: [x**2 for x in range(10) if x % 2 == 0]  # creeaza o lista cu pătratele numerelor 
+            pare de la 0 la 9
 
       - list slicing - extrage subliste folosind sintaxa list[start:stop:step]
 
@@ -59,7 +61,8 @@ Structuri de date în Python
       - iterare - se poate itera prin elementele unei tuple folosind bucla for
 
       - tuple comprehension (generatoare) - sintaxă pentru a crea tupluri noi din iterabile existente
-            Ex: tuple(x**2 for x in range(10) if x % 2 == 0)  # tupla pătratelor numerelor pare de la 0 la 9
+            Ex: tuple(x**2 for x in range(10) if x % 2 == 0)  # tupla pătratelor numerelor pare de 
+            la 0 la 9
 
 '''
 
@@ -119,127 +122,128 @@ Structuri de date în Python
 
 
 # 1. Liste - exemple
-fructe = ['mar', 'banana', 'portocala']      # creare listă
-fructe.append('kiwi')                        # adăugare element la final
-fructe.insert(1, 'ananas')                   # inserează pe poziția 1
-fructe.remove('banana')                      # elimină prima apariție a 'banana'
-element = fructe.pop()                       # elimină și returnează ultimul element
-index_ananas = fructe.index('ananas')        # indexul lui 'ananas'
-nr_mere = fructe.count('mar')                # de câte ori apare 'mar'
-fructe.sort()                                # sortează lista (in place)
-fructe.reverse()                             # inversează ordinea (in place)
-fructe.extend(['pruna', 'cireasa'])          # adaugă elemente din alt iterabil
-fructe_copie = fructe.copy()                 # copie superficială
-lungime = len(fructe)                        # numărul de elemente
-fructe.clear()                               # elimină toate elementele
-
+# fructe = ['mar', 'banana', 'portocala']      # creare listă
+# fructe.append('kiwi')                        # adăugare element la final
+# fructe.insert(1, 'ananas')                   # inserează pe poziția 1
+# fructe.remove('banana')                      # elimină prima apariție a 'banana'
+# element = fructe.pop(0)                       # elimină și returnează ultimul element
+# index_portocala = fructe.index('portocala')        # indexul lui 'ananas'
+# nr_mere = fructe.count('mar')                # de câte ori apare 'mar'
+# fructe.sort()                                # sortează lista (in place)
+# fructe.reverse()                             # inversează ordinea (in place)
+# fructe.extend(['pruna', 'cireasa'])          # adaugă elemente din alt iterabil
+# fructe_copie = fructe.copy()                 # copie superficială
+# lungime = len(fructe)                        # numărul de elemente
+# fructe.clear()                               # elimină toate elementele
+# print(fructe)
 # list() - conversie
-l = list('abc')  # ['a', 'b', 'c']
+# l = list('abc')  # ['a', 'b', 'c']
 
-# sorted() - copie sortată
-numere = [3, 1, 2]
-numere_sortate = sorted(numere)  # [1, 2, 3]
+# # sorted() - copie sortată
+# numere = [3, 1, 2]
+# numere_sortate = sorted(numere)  # [1, 2, 3]
 
-# enumerate()
-for idx, val in enumerate(['a', 'b', 'c']):
-  print(idx, val)
+# # enumerate()
+# for idx, val in enumerate(['a', 'b', 'c']):
+  # print(idx, val)
 
-# zip()
-nume = ['Ana', 'Ion']
-varsta = [20, 30]
-for n, v in zip(nume, varsta):
-  print(n, v)
+# # zip()
+# nume = ['Ana', 'Ion']
+# varsta = [20, 30]
+# for n, v in zip(nume, varsta):
+  # print(n, v)
 
-# list comprehension
-patrate_pare = [x**2 for x in range(10) if x % 2 == 0]
+# # list comprehension
+patrate_pare = [x*2 for x in range(10) if x % 2 == 0]
 print(patrate_pare)
 
-# slicing
-lista = [0, 1, 2, 3, 4, 5]
-sublista = lista[1:4]  # [1, 2, 3]
-invers = lista[::-1]   # [5, 4, 3, 2, 1, 0]
+# # slicing
+# lista = [0, 1, 2, 3, 4, 5]
+# sublista = lista[1:4]  # [1, 2, 3]
+# invers = lista[::-1]   # [5, 4, 3, 2, 1, 0]
 
 
-# 2. Tuple - exemple
-zile = ('luni', 'marti', 'miercuri', 'luni') # creare tuple
-print(zile[0])                               # accesare element
-nr_luni = zile.count('luni')                 # de câte ori apare 'luni'
-poz_marti = zile.index('marti')              # indexul lui 'marti'
-subtuple = zile[1:3]                         # slicing
-for zi in zile:                              # iterare
-   print(zi)
-tuple_concat = zile + ('joi',)               # concatenare
-tuple_mult = zile * 2                        # multiplicare
+# # 2. Tuple - exemple
+# zile = ('luni', 'marti', 'miercuri', 'luni') # creare tuple
+# print(zile[0])                               # accesare element
+# nr_luni = zile.count('luni')                 # de câte ori apare 'luni'
+# poz_marti = zile.index('marti')              # indexul lui 'marti'
+# subtuple = zile[1:3]                         # slicing
+# for zi in zile:                              # iterare
+#    print(zi)
+# tuple_concat = zile + ('joi',)               # concatenare
+# tuple_mult = zile * 2                        # multiplicare
 
-# tuple() - conversie
-t = tuple([1, 2, 3])
-print(t)
+# # tuple() - conversie
+# t = tuple([1, 2, 3])
+# print(t)
 
-# tuple comprehension (generator)
-tuple_gen = tuple(x**2 for x in range(6) if x % 2 == 0)
-print(tuple_gen)
-# zile[1] = 'joi'  # va da eroare, tuplele nu pot fi modificate
-
-
-# 3. Seturi - exemple
-culori = {'rosu', 'verde', 'albastru'}              # creare set
-culori.add('galben')                                # adăugare element
-culori.remove('verde')                              # eliminare element (eroare dacă nu există)
-culori.discard('negru')                             # eliminare fără eroare dacă nu există
-element = culori.pop()                              # elimină și returnează un element aleator
-culori.update(['negru', 'alb'])                     # adaugă elemente dintr-un iterabil
-reuniune = culori.union({'roz', 'mov'})             # reuniune cu alt set
-intersectie = culori.intersection({'alb', 'rosu'})  # intersecție
-dif = culori.difference({'rosu'})                   # diferență
-este_submultime = {'alb', 'negru'}.issubset(culori) # verificare submulțime
-culori_copie = culori.copy()                        # copie superficială
-culori.clear()                                      # elimină toate elementele
-
-for culoare in culori:                              # iterare
-  print(culoare)
-
-# set() - conversie
-s = set([1, 2, 2, 3])  # {1, 2, 3}
-print(s)
-
-# frozenset
-fs = frozenset(['a', 'b', 'c'])
-print(fs)
-
-# set comprehension
-patrate_pare_set = {x**2 for x in range(10) if x % 2 == 0}
-print(patrate_pare_set)
+# # tuple comprehension (generator)
+# tuple_gen = tuple(x**2 for x in range(6) if x % 2 == 0)
+# print(tuple_gen)
+# # zile[1] = 'joi'  # va da eroare, tuplele nu pot fi modificate
 
 
-# 4. Dicționare - exemple
-persoana = {'nume': 'Ana', 'varsta': 25}     # creare dicționar
-print(persoana['nume'])                      # accesare valoare
-persoana['varsta'] = 26                      # modificare valoare
-persoana['oras'] = 'Cluj'                    # adăugare pereche
-chei = list(persoana.keys())                 # toate cheile
-valori = list(persoana.values())             # toate valorile
-perechi = list(persoana.items())             # toate perechile (tupluri)
-v = persoana.get('nume', 'necunoscut')       # accesare cu valoare implicită
-persoana.pop('varsta')                       # elimină și returnează valoarea pentru cheia 'varsta'
-persoana.update({'email': 'ana@email.com'})  # actualizează cu alt dicționar
-persoana.update([('telefon', '1234')])       # actualizează cu listă de tupluri
-persoana.setdefault('tara', 'Romania')       # adaugă dacă nu există
-persoana_copie = persoana.copy()             # copie superficială
-persoana.clear()                             # elimină toate elementele
+# # 3. Seturi - exemple
+# culori = {'rosu', 'verde', 'albastru'}              # creare set
+# culori.add('galben')                                # adăugare element
+# culori.remove('verde')                              # eliminare element (eroare dacă nu există)
+# culori.discard('negru')                             # eliminare fără eroare dacă nu există
+# element = culori.pop()                              # elimină și returnează un element aleator
+# culori.update(['negru', 'alb'])                     # adaugă elemente dintr-un iterabil
+# reuniune = culori.union({'roz', 'mov'})             # reuniune cu alt set
+# intersectie = culori.intersection({'alb', 'rosu'})  # intersecție
+# dif = culori.difference({'rosu'})                   # diferență
+# este_submultime = {'alb', 'negru'}.issubset(culori) # verificare submulțime
+# culori_copie = culori.copy()                        # copie superficială
+# culori.clear()                                      # elimină toate elementele
 
-for cheie in persoana:                       # iterare chei
-  print(cheie)
+# for culoare in culori:                              # iterare
+#   print(culoare)
 
-for valoare in persoana.values():            # iterare valori
-  print(valoare)
+# # set() - conversie
+# s = set([1, 2, 2, 3])  # {1, 2, 3}
+# print(s)
 
-for cheie, valoare in persoana.items():      # iterare perechi
-  print(cheie, valoare)
+# # frozenset
+# fs = frozenset(['a', 'b', 'c'])
+# print(fs)
 
-# dict() - conversie
-d = dict([('a', 1), ('b', 2)])
-print(d)
+# # set comprehension
+# patrate_pare_set = {x**2 for x in range(10) if x % 2 == 0}
+# print(patrate_pare_set)
 
-# dict comprehension
-patrate = {x: x**2 for x in range(5)}
-print(patrate)
+
+# # 4. Dicționare - exemple
+# persoana = {'nume': 'Ana', 'varsta': 25}     # creare dicționar
+# print(persoana['nume'])                      # accesare valoare
+# persoana['varsta'] = 26                      # modificare valoare
+# persoana['oras'] = 'Cluj'                    # adăugare pereche
+# chei = list(persoana.keys())                 # toate cheile
+# valori = list(persoana.values())             # toate valorile
+# perechi = list(persoana.items())             # toate perechile (tupluri)
+# v = persoana.get('nume', 'necunoscut')       # accesare cu valoare implicită
+# persoana.pop('varsta')                       # elimină și returnează valoarea pentru cheia 'varsta'
+# persoana.update({'email': 'ana@email.com'})  # actualizează cu alt dicționar
+# persoana.update([('telefon', '1234')])       # actualizează cu listă de tupluri
+# persoana.setdefault('tara', 'Romania')       # adaugă dacă nu există
+# persoana_copie = persoana.copy()             # copie superficială
+# persoana.clear()                             # elimină toate elementele
+
+# for cheie in persoana:                       # iterare chei
+#   print(cheie)
+
+# for valoare in persoana.values():            # iterare valori
+#   print(valoare)
+
+# for cheie, valoare in persoana.items():      # iterare perechi
+#   print(cheie, valoare)
+
+# # dict() - conversie
+# d = dict([('a', 1), ('b', 2)])
+# print(d)
+
+# # dict comprehension
+# patrate = {x: x**2 for x in range(5)}
+# print(patrate)
+

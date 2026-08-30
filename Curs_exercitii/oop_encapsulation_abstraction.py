@@ -2,26 +2,34 @@
 OOP - Encapsulation si Abstraction + Special Methods
 '''
 '''
-Encapsulation - ascunderea datelor interne ale unui obiect și accesarea lor controlată prin metode publice
+Encapsulation - ascunderea datelor interne ale unui obiect și accesarea lor controlată prin metode 
+publice
     Analogie:
         - Stim ce face o capsula de medicamente, dar nu si ce contine sau cum functioneaza in interior
         - Putem sa conducem o masina fara sa stim toate componentele interne
 
     Tipuri de atribute in encapsulation:
         - Atribute publice - pot fi accesate si modificate direct din exteriorul clasei
-        - Atribute protejate - pot fi accesate si modificate doar in interiorul clasei si in clasele derivate, sunt prefixate cu _ (un underscore)
-        - Atribute private - nu pot fi accesate sau modificate direct din exteriorul clasei, sunt prefixate cu __ (doua underscore-uri)
+        - Atribute protejate - pot fi accesate si modificate doar in interiorul clasei si in clasele 
+        derivate, sunt prefixate cu _ (un underscore)
+        - Atribute private - nu pot fi accesate sau modificate direct din exteriorul clasei, sunt 
+        prefixate cu __ (doua underscore-uri)
 '''
 '''
-Abstraction - ascunde complexitatea (detaliile de implementare) si expune doar functionalitatea esentiala a unei clase
+Abstraction - ascunde complexitatea (detaliile de implementare) si expune doar functionalitatea 
+esentiala a unei clase
     Analogie:
-        - Folosim un telefon mobil pentru a face apeluri, trimite mesaje, naviga pe internet, etc., fara sa stim cum functioneaza in interior
-        - Folosim un televizor pentru a viziona programe, fara sa stim cum functioneaza electronica din interior
+        - Folosim un telefon mobil pentru a face apeluri, trimite mesaje, naviga pe internet, 
+        etc., fara sa stim cum functioneaza in interior
+        - Folosim un televizor pentru a viziona programe, fara sa stim cum functioneaza 
+        electronica din interior
 
 
-Special Methods - metode predefinite in Python care au un comportament special si care pot fi suprascrise pentru a personaliza comportamentul
+Special Methods - metode predefinite in Python care au un comportament special si care pot fi 
+suprascrise pentru a personaliza comportamentul
     - Exemple de metode speciale: __init__, __str__, __repr__, __len__, etc.
-    - Aceste metode sunt apelate automat in anumite situatii, cum ar fi atunci cand se creeaza un obiect, cand se converteste un obiect la string, cand se afiseaza un obiect etc.
+    - Aceste metode sunt apelate automat in anumite situatii, cum ar fi atunci cand se creeaza un 
+    obiect, cand se converteste un obiect la string, cand se afiseaza un obiect etc.
 
 '''
 

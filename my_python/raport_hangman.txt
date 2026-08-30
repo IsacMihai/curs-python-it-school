@@ -1,0 +1,12 @@
+=== RAPORT HANGMAN GAME MANAGER ===
+
+Total jocuri: 1
+Victorii: 1
+Infrangeri: 0
+Scor mediu: 12.0
+
+Cel mai bun jucator: Isac Mihai cu scorul 12
+Cel mai slab jucator: Isac Mihai cu scorul 12
+
+=== TOATE SCORURILE ===
+ID: 1 | Nume: Isac Mihai | Nivel: easy | Cuvant: luna | Rezultat: win | Scor: 12 | Incercari ramase: 1 | Data: 2026-05-05 18:13:41

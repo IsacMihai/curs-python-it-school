@@ -43,10 +43,13 @@ Fișiere JSON și CSV în Python
 2) Lucrul cu CSV
     - Modulul "csv" permite prelucrarea fișierelor CSV (Comma-Separated Values).
     - Funcții principale:
-        - csv.reader(file) - citește datele dintr-un fișier CSV și le returnează ca un iterator de liste.
+        - csv.reader(file) - citește datele dintr-un fișier CSV și le returnează ca un iterator 
+        de liste.
         - csv.writer(file) - scrie date într-un fișier CSV folosind un obiect writer.
-        - csv.DictReader(file) - citește datele dintr-un fișier CSV și le returnează ca un iterator de dicționare.
-        - csv.DictWriter(file, fieldnames) - scrie date într-un fișier CSV folosind un obiect DictWriter.
+        - csv.DictReader(file) - citește datele dintr-un fișier CSV și le returnează ca un iterator 
+        de dicționare.
+        - csv.DictWriter(file, fieldnames) - scrie date într-un fișier CSV folosind un obiect
+          DictWriter.
 
     Exemplu fișier CSV:
     nume,varsta,oras

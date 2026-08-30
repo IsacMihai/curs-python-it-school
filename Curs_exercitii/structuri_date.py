@@ -2,7 +2,8 @@
 Structuri de date în Python
 
 1. Liste (list)
-    - O listă este o colecție ordonată, modificabilă(mutable), care permite elemente duplicate, indexabila.
+    - O listă este o colecție ordonată, modificabilă(mutable), care permite elemente duplicate, 
+    indexabila.
 
     - Se definește cu paranteze pătrate: [ ] sau folosind funcția list().
 
@@ -29,7 +30,8 @@ Structuri de date în Python
       - zip(iter1, iter2, ...) - combină mai multe iterabile într-un singur iterabil de tupluri
 
       - list comprehension - sintaxă pentru a crea liste noi din iterabile existente
-            Ex: [x**2 for x in range(10) if x % 2 == 0]  # creeaza o lista cu pătratele numerelor pare de la 0 la 9
+            Ex: [x**2 for x in range(10) if x % 2 == 0]  # creeaza o lista cu pătratele numerelor pare 
+            de la 0 la 9
 
       - list slicing - extrage subliste folosind sintaxa list[start:stop:step]
 
@@ -59,7 +61,8 @@ Structuri de date în Python
       - iterare - se poate itera prin elementele unei tuple folosind bucla for
 
       - tuple comprehension (generatoare) - sintaxă pentru a crea tupluri noi din iterabile existente
-            Ex: tuple(x**2 for x in range(10) if x % 2 == 0)  # tupla pătratelor numerelor pare de la 0 la 9
+            Ex: tuple(x**2 for x in range(10) if x % 2 == 0)  # tupla pătratelor numerelor pare de la 
+            0 la 9
 
 '''
 
@@ -104,7 +107,10 @@ Structuri de date în Python
       * items()        - returnează o listă de tupluri (cheie, valoare)
       * pop(k)         - elimină și returnează valoarea pentru cheia k
       * popitem()      - elimină și returnează ultima pereche adăugată
-      * update(d)      - actualizează dicționarul cu perechi din d (d poate fi alt dicționar sau o listă de tupluri (cheie, valoare)); dacă o cheie există deja, valoarea va fi suprascrisă; dacă nu există, va fi adăugată. Exemplu: d1.update({'a': 10, 'b': 20}), d1.update([('c', 30), ('d', 40)])
+      * update(d)      - actualizează dicționarul cu perechi din d (d poate fi alt dicționar sau o listă
+        de tupluri (cheie, valoare)); dacă o cheie există deja, valoarea va fi suprascrisă; dacă nu 
+        există, va fi adăugată. 
+        Exemplu: d1.update({'a': 10, 'b': 20}), d1.update([('c', 30), ('d', 40)])
       * clear()        - elimină toate elementele
 
     - Funcții utile:
@@ -112,7 +118,8 @@ Structuri de date în Python
 
       - get(k, default) - returnează valoarea pentru cheia k sau default dacă nu există
 
-      - setdefault(k, default) - returnează valoarea pentru cheia k; dacă nu există, adaugă k cu valoarea default
+      - setdefault(k, default) - returnează valoarea pentru cheia k; dacă nu există, adaugă k cu 
+      valoarea default
 
       - iterare - se poate itera prin chei, valori sau perechi folosind bucla for
 '''
@@ -304,11 +311,11 @@ Structuri de date în Python
 # print(my_set.pop())
 # print(my_set)
 
-set1 = {1, 2, 3, 4, 5}
-# print(set1)
-set2 = {3, 4, 7, 8, 9}
-# print(set2)
-# set1.update(set2)
+# set1 = {1, 2, 3, 4, 5}
+# # print(set1)
+# set2 = {3, 4, 7, 8, 9}
+# # print(set2)
+# # set1.update(set2)
 # print(set1)
 
 # print(set1.union(set2))
@@ -333,11 +340,244 @@ set2 = {3, 4, 7, 8, 9}
 # print(type(ex))
 # print(ex)
 
+# fructe = ['banana', 'mere', 'pere']
+# print(fructe)
+# print(fructe[1])
+# fructe[0] = 'capsuni'  # schimbi un fruct
+# print(fructe)
+# print(fructe[1][-1])  # [start:stop:step]
+# print(fructe[0][0:4]) # [start:stop:step]
 
-print({x**2 for x in range(10) if x % 2 == 0})
+# elementul = fructe[0]   # primul element
+# caracterul = elementul[0:4] #   [start:Stop:step]
+# print(caracterul)
 
-lista = [1,2,3,3,3,4]
-frz_set = frozenset(lista)
-print(frz_set)
-l = list(frz_set)
-print(l)
+# print(fructe[-1].upper()) # sa scrii sa le faca mari 
+
+# lista_smechera = [1, 2, 3, 'kiwi', 'bere', ['Mariana', 'Ionela', 'Marius']] # lista in lista 
+# # print(lista_smechera[-1][1][3:6]) # [start:stop:step]
+# # print(lista_smechera[-1][-2][-3:]) # [start:stop:step]
+# print(len(lista_smechera))
+
+# lista_smechera.append(4.6) # append - adauga un element la finalul listei
+# print(lista_smechera)
+# lista_smechera.insert(3, 3.5) # insert - primul este indexul si al doilea elem care il adaugam
+# print(lista_smechera)
+# lista_smechera.remove(3.5) # dam remove la acel element
+# print(lista_smechera)
+
+# lista1 = [1, 2, 3]
+# lista2 = [4, 5, 6]
+
+# lista1.append(lista2) # baga ca obiect lista 2
+# print(lista1)
+# lista1.extend(lista2)
+# print(lista1)
+# lista1.clear()
+# print(lista1)
+
+# exemplu = ['1', '3', '2', 'asa', 'se', 'face', 'un', 'sort', True]
+
+# for index, valoare in enumerate(exemplu): # - > enumerate- ia si index si valoarea
+#   if valoare == 'face':
+#       print(f'{index} -> {valoare}')
+
+# print(exemplu[-3::]) # - folosim slice cu start:stop:Step
+
+
+# x = [1, 2, 3]  # -> cum se foloseste zip
+# y = [4, 5, 6]
+
+# for a, b in zip(x,y):
+#     print(f'elementele impachetate sunt {a} - {b}')
+
+
+# nume = ['ana', 'maria', 'marcela'] # -> cum se foloseste zip
+# varsta = [32, 54, 18]
+
+# for elem_nume, elem_varsta in zip(nume, varsta):
+#     print(f'{elem_nume} are {elem_varsta} ani')
+
+# lista1 = [False, False, False, False]
+# # lista1 = [1, 2, 3, 4, 5]
+# lista2 = [0, 2, 3, 4, ]
+
+# print(any(lista1))
+# print(any(lista2))
+# print(all(lista1))
+# print(all(lista2))
+
+
+#sa se scrie un program care genereaza numere pare intre 1 si 10 inculsiv si o afiseaza.
+
+# lista_numere = range(1,11)
+# lista_pare = [] # -> creem o lista goala
+# for x in range(1, 11): # ->parcurgem fiecare element daca e divizibil cu 2
+#     if x % 2 == 0:
+#         lista_pare.append(x) # -> il adaugam in lista
+
+# print(lista_pare)
+
+#sau cu list coprehension 
+
+# lista_mea = [x for x in range(1, 11) if x % 2 == 0]
+# print(lista_mea)
+# lista_mea = [x ** 2 for x in range(1, 11) if x % 2 == 0] #=> la puterea 2 (**2)
+# print(lista_mea)
+
+#lista divizibile cu 3 si 5 din lista_initiala
+
+# lista_initiala = [3, 5, 7, 15, 30]
+# lista = [x for x in lista_initiala if x % 3 == 0 and x % 5 == 0]
+# print(lista)
+
+
+# lista_initiala = [3, 5, 7, 15, 21, 72, 56, 99]
+# flag = any([x % 3 == 0 and x % 5 == 0 for x in lista_initiala])
+# print(flag)
+
+# tuple_numere = (1, 2, 3, 4)
+# print(tuple_numere)
+# tuple_numere = list(tuple_numere)
+# print(tuple_numere)
+# tuple_numere.append(5)
+# print(tuple_numere)
+# tuple_numere = tuple(tuple_numere)
+# print(tuple_numere)
+
+# tuple_ceva = {'Ana', 'Ionescu', '25'}
+# prenume, varsta = tuple_ceva
+# print(prenume)
+# print(nume)
+# print(varsta)
+
+# t = tuple('Python')
+# print(t)
+
+# coordonate = (100, 200)
+# x, y = coordonate
+# print(x)
+# print(y)
+
+# t = ('ana', 'mihai', 'ion')
+# for nume in t:
+#     print(nume)
+
+# note = (8, 9, 10, 8, 7)
+
+# print(note.count(8))
+# print(note.index(10))
+
+# for nota in note:
+#     print(nota)
+
+# lista = [5, 10, 15]
+# lista_noua = tuple(lista)
+# print(lista_noua)
+
+# t = ("Mihai", 30, "Timisoara")
+# nume, varsta, localitate = t
+# print(nume)
+# print(varsta)
+# print(localitate)
+
+# t = (5)
+
+# print(type(t))
+
+# Exercitiu extra:
+# Se dau urmatoarele expresii matematice:
+# ((a + b) * (c - d) + e) / f - (g * (h + i)) -> corect deschise si inchise
+# ((a + b) * (c - d) + e) / f - )g * (h + i)( -> incorect deschise si inchise
+# Sa se verifice daca parantezele sunt corect deschise si inchise.
+
+# expresie = "((a + b) * (c - d) + e) / f - )g * (h + i)( "
+
+# lista = [] # creem o lista goala, nu contine nimic, o folosim sa tinem minte paranteze deschise.
+# corect = True # presupunem ca expresia este corecta
+
+# for caracter in expresie: # luam fiecare caracter din expresie ,unu cate unu
+#     if caracter == '(':  # verificam daca am gasit o paranteza deschisa
+#         lista.append(caracter) #daca am gasit o punem in lista
+
+#     elif caracter == ')': # daca gasim o paranteza inchisa
+#         if len(lista) == 0: # verificam daca lista este goala
+#             corect = False #marcam expresia ca fiind gresita
+#             break # oprim bucla imediat, nu mai are rost sa verificam restul expresie
+#         else:  #daca lista nu este goala
+#             lista.pop() #scoatem ultima paranteza deschisa
+
+# if len(lista) != 0: #verificăm dacă au rămas paranteze deschise.
+#     corect = False #Marcăm expresia ca fiind incorectă
+
+# if corect:
+#     print('Conditia e corecta') #Dacă variabila corect este True
+# else:
+#     print('Conditia e incorecta') #Dacă corect este False
+
+
+# bul1 = {'Nume': 'Ana', 'CNP': 123, 'Varsta': 18}
+# bul2 = {'Nume': 'Marius', 'CNP': 125, 'Varsta': 22}
+
+# for element in bul1.keys():
+#     print(element)
+
+# for element in bul2.values():
+#     print(element)
+
+# for key, value in bul1.items():
+#     print(key, value)
+
+# capitals = {'USA': 'Washington D.C.',
+#             'India': 'New Delhi',
+#             'China': 'Beijing',
+#             'Russia': 'Moscow' }
+
+# print(dir(capitals))
+# print(help(capitals))
+# print(capitals.get('japan'))
+
+# if capitals.get('India'):
+#     print('The capital exists')
+# else:
+#     print("The capital doesn't exist")
+
+# capitals.update({'Germany': 'Berlin'})
+# capitals.update({'USA': 'Detroit'})
+# capitals.pop('China')
+# capitals.popitem()
+ 
+# keys = capitals.keys()
+
+# for key in capitals.keys():
+#     print(key)
+
+# values = capitals.values()
+# for value in capitals.values():
+#     print(value)
+
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f"{key}:{value}")
+
+#collection = single 'variable' used to store multiple values
+# list = [] ordered and changeable. Duplicates ok
+# Set = {} unordered an immutable, but Add/Remove ok. No duplicates
+# tuple = () ordered and unchangeable. Duplicates ok. FASTER
+
+fruits = ['apple', 'orange', 'banana', 'coconut']
+#print(dir(fruits))
+#print(help(fruits))
+#74print(len(fruits))
+#print('apple' in fruits)
+
+# print(fruits[::-1])
+# for fruit in fruits:
+    # print(fruit)
+# fruits[1] = 'pineapple'
+# for fruit in fruits:
+#     print(fruit)
+fruits.reverse()
+# fruits.sort()
+# fruits.append('pineapple')
+print(fruits)

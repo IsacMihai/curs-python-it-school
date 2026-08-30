@@ -1,0 +1,76 @@
+# def aduna(nr1, nr2):
+#     try:
+#         suma = int(nr1) + int(nr2)
+#     except ValueError:
+#         loggin.error('Unul din numere nu este integer! Introduce doua numere valide')
+
+# def aduna(nr1, nr2)
+#     while True:
+#         nr1 = input('Baga nr1: ')
+#         nr2 = input('Baga nr2: ')
+#         logging.debug(f'Numerele introduse sunt: {nr1} si {nr2}')
+#         if nr1 == 'x' or nr2 == 'x':
+#             break
+
+#         print(aduna(nr1, nr2))
+
+
+#avem o lista de elemente [10 -5, 5, 12, 20, 30, -6]
+
+# import logging
+# logging.basicConfig(level=logging.DEBUG, format='%(asctime) - %(levelname)s - %(message)s')
+
+# def date_processor(lista):
+#     logging.info('Incepere procesare')
+#     for index, value in enumerate(lista):
+#         if value < 0:
+#             logging.warning(f'Valoarea negativa {value} la pozitia {index}')
+#         else:
+#             logging.debug(f'Valorea citita: {value} la pozitia {index}')
+#             processomg_result = value / 2
+#             print(f'Processed result: {processing_result}')
+#             logging.debug(f'Processing result: {processomg_result}')
+
+#     logging.info('Procesare finalizata')
+
+
+# date = [10 -5, 5, 12, 20, 30, -6]
+# date_processor(date)
+
+
+
+#cum folosim assertions:
+
+# import math
+
+# def calcul_logaritm(x):
+#     assert x > 0, f'Numarul introdus trebuie sa fie pozitiv (valoare introdusa: {x})'
+#     logaritm = math.log(x)
+#     return logaritm
+
+# print(calcul_logaritm(10))
+# print(calcul_logaritm(-1))
+
+#alt exemplu assertions:
+
+# try:
+#     print(10 / 0)
+# except Exception as exceptie:
+#     print(exceptie)
+
+#alt exemplu assertions:
+
+# import traceback
+
+# while True:
+#     x = int(input('Baga numar: '))
+#     if x == 'x':
+#         break
+        
+#     try:
+#         print(10 / 0)
+#     except Exception as exceptie:
+#         print('A aparut o erroare la impartire!')
+#         traceback.print_exc()
+#         print(f'Exceptia aparuta este: {exceptie}')
+

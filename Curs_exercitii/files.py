@@ -50,7 +50,7 @@ Parcurgere structura de foldere
             print(os.path.join(root, file))
 '''
 
-mesaj = "Bai, frate! In sfrasit ne-o invatat Danutu despre fisiere!"
+# mesaj = "Bai, frate! In sfrasit ne-o invatat Danutu despre fisiere!"
 nume_fisier = "danutu_thau.txt"
 
 # my_file = open("danutu_thau.txt", 'w')
@@ -67,16 +67,16 @@ nume_fisier = "danutu_thau.txt"
 # Ionut e mare baiat pe cartier
 # Cand cresc mare vreau sa fiu politist
 
-# mesaj1 = 'Ana are mere\n'
-# mesaj2 = 'Ionut e mare baiat pe cartier\n'
-# mesaj3 = 'Cand cresc mare vreau sa fiu politist\n'
+mesaj1 = 'Ana are mere\n'
+mesaj2 = 'Ionut e mare baiat pe cartier\n'
+mesaj3 = 'Cand cresc mare vreau sa fiu politist\n'
 
-# my_file = open(nume_fisier, 'a')
-# my_file.writelines([mesaj1, mesaj2, mesaj3])
-# # my_file.append(mesaj1)
-# # my_file.append(mesaj2)
-# # my_file.append(mesaj3)
-# my_file.close()
+my_file = open(nume_fisier, 'a')
+my_file.writelines([mesaj1, mesaj2, mesaj3])
+my_file.append(mesaj1)
+my_file.append(mesaj2)
+my_file.append(mesaj3)
+my_file.close()
 
 # Bai, frate! In sfrasit ne-o invatat Danutu despre fisiere!
 # Ionela are mere
@@ -152,7 +152,7 @@ nume_fisier = "danutu_thau.txt"
 #         output_file.write(line[::-1])
 #     print('Resscriere fisier reusita!')
 
-import os
+# import os
 
 # * os.listdir(path) - listează fișierele și directoarele din path
 # * os.path.join(path, name) - construiește un path complet
@@ -215,3 +215,23 @@ import os
 #             my_file_path = os.path.join(root, file)
 #             with open(my_file_path, 'r') as my_file:
 #                 print(my_file.read())
+
+# lista = [1, 2, 3, 3, 4, 4, 5, 6, 4, 2, 1, 5, 3, 3, 7]
+
+# aparitii = {}
+
+# for numar in lista:
+
+#     if numar in aparitii:
+#         aparitii[numar] += 1
+
+#     else:
+#         aparitii[numar] = 1
+
+# print(aparitii)
+
+
+# lista = [1, 2, 3, 3, 4, 4, 5]
+
+# for numar in set(lista):
+#     print(numar, "apare de", lista.count(numar), "ori")

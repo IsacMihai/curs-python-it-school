@@ -1,0 +1,57 @@
+"""
+Sa se scrie un program care tine evidenta angajatilor dintr-o companie.
+Informatiile pe care trebuie sa le retinem despre un angajat sunt urmatoarele:
+	1) CNP
+	2) Nume
+	3) Prenume
+	4) Varsta
+	5) Salar
+	6) Departament
+	7) Senioritate (junior, mid, senior)
+
+Programul trebuie sa dispuna de un meniu care ne permite sa efectuam urmatoarele actiuni:
+	1) Adaugare angajat
+	2) Cautare angajat (dupa CNP)
+	3) Modificare date angajat (dupa CNP)
+	4) Stergere angajat (dupa CNP)
+	5) Afisare angajati
+	6) Calcul cost total salarii companie
+	7) Calcul cost total salarii departament
+	8) Calcul fluturas salar angajat (dupa CNP) (CAS - 10% din brut, CASS - 25% din brut, Impozit - 10% din ce a ramas)
+	9) Afisarea angajatilor pe baza senioritatii
+	10) Afisarea angajatilor pe baza departamentului
+	11) Iesire
+
+Informatiile despre angajati trebuie sa fie stocate intr-un fisier astfel incat sa poata fi accesate si modificate ulterior.
+
+Criterii notare:
+    - 0.5p  documentare cod (docstrings, comentarii)
+    - 0.5p  type hints
+    - 1p    modularitate (impartirea codului in functii, module, etc)
+    - 1p    naming conventions (denumire variabile, denumire functii, etc)
+    - 1p    error handling (try-except, validare integritate date *, etc)
+    - 1p    salvarea datelor intr-un fisier (citire/scriere)
+    - 0.5p  adaugare angajati
+    - 0.5p  afisare angajati
+    - 0.5p  cautare angajat
+    - 0.5p  modificare date angajat
+    - 0.5p  stergere angajat
+    - 0.5p  calcul cost total salarii companie
+    - 0.5p  calcul cost total salarii departament
+    - 0.5p  calcul fluturas salarial
+    - 0.5p  afisarea angajatilor pe baza senioritatii
+    - 0.5p  afisarea angajatilor pe baza departamentului
+
+	* Verificare integriatate date (parametrii introdusi sa fie corespunzatori)
+		- Exemple:
+			- CNP sa fie de lungime corespunzatoare si sa contina doar cifre
+			- Varsta sa fie mai mare de 18 ani
+			- Salarul sa fie mai mare decat minimul pe economie (4050)
+			- etc
+
+Termen limita: Sambata 6 martie 2026 ora 23:59
+Lucrul in echipa pentru acest proiect este permis, dar fiecare membru trebuie sa predea o versiune individuala a proiectului,
+care sa fie diferita de cea a colegilor sai (de exemplu, prin adaugarea unor functionalitati suplimentare sau prin implementarea intr-un mod diferit a functionalitatilor cerute).
+Pentru persoanele care depasesc termenul limita se vor scadea cate 0.25p pentru fiecare zi de intarziere.
+Maximul de zile de intarziere este de 14 zile, dupa care proiectul nu va mai fi acceptat, iar nota va fi 1.
+"""

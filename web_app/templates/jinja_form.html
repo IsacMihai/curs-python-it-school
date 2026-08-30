@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jinja form</title>
+    </head>
+    <body>
+        <form method="POST" action="/jinja_form">
+            <label for="prenume">Prenume:</label>
+            <input type="text" id="prenume" name="prenume"><br><br>
+
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume"><br><br>
+
+            <label for="varsta">Varsta:</label>
+            <input type="number" id="varsta" name="varsta"><br><br>
+
+            <input type="submit" value="Trimite datele">
+        </form>
+
+        {% if submitted_data %}
+        <h3>Date primite:</h3>
+        <p>Prenume trimis: {{ submitted_data.prenume }}</p>
+        <p>Nume trimis: {{ submitted_data.nume }}</p>
+        <p>Varsta trimisa: {{ submitted_data.varsta }}</p>
+        {% endif %}
+
+    </body>
+</html>

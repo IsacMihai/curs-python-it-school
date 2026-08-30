@@ -2,14 +2,17 @@
 Object Oriented Programming - OOP
 
 Tipuri de programare:
-    - Procedurala -> se bazeaza pe executarea secventiala a instructiunilor, folosind functii pentru a organiza codul
+    - Procedurala -> se bazeaza pe executarea secventiala a instructiunilor, folosind functii pentru a
+      organiza codul
         * Programul este o listă de instrucțiuni
         * Se folosesc variabile care se modifică
         * Flux clar, de sus în jos
 
-        - Util pentru programe simple, scripturi, dar devine dificil de gestionat pe măsură ce programul crește în complexitate
+        - Util pentru programe simple, scripturi, dar devine dificil de gestionat pe măsură ce programul
+          crește în complexitate
 
-    - Orientata pe obiecte (OOP) -> se bazeaza pe organizarea codului in jurul obiectelor si interactiunii dintre ele
+    - Orientata pe obiecte (OOP) -> se bazeaza pe organizarea codului in jurul obiectelor si 
+    interactiunii dintre ele
         * Programul este o colecție de obiecte care interacționează între ele
         * Flux mai flexibil, bazat pe interacțiunea dintre obiecte
 
@@ -36,7 +39,8 @@ Analogie:
     Casa construita -> Obiect
 
 class - cuvantul cheie pentru a defini o clasa in Python
-numele clasei - incepe cu litera mare, iar daca avem mai multe cuvinte fiecare incepe cu litera mare (CamelCase)
+numele clasei - incepe cu litera mare, iar daca avem mai multe cuvinte fiecare incepe cu litera mare 
+(CamelCase)
 
 Sintaxa:
 # Definirea unei clase

@@ -3,14 +3,17 @@ Object Oriented Programming - OOP
 '''
 '''
 Tipuri de programare:
-    - Procedurala -> se bazeaza pe executarea secventiala a instructiunilor, folosind functii pentru a organiza codul
+    - Procedurala -> se bazeaza pe executarea secventiala a instructiunilor, folosind functii pentru a 
+    organiza codul
         * Programul este o listă de instrucțiuni
         * Se folosesc variabile care se modifică
         * Flux clar, de sus în jos
 
-        - Util pentru programe simple, scripturi, dar devine dificil de gestionat pe măsură ce programul crește în complexitate
+        - Util pentru programe simple, scripturi, dar devine dificil de gestionat pe măsură ce programul
+          crește în complexitate
 
-    - Orientata pe obiecte (OOP) -> se bazeaza pe organizarea codului in jurul obiectelor si interactiunii dintre ele
+    - Orientata pe obiecte (OOP) -> se bazeaza pe organizarea codului in jurul obiectelor si 
+    interactiunii dintre ele
         * Programul este o colecție de obiecte care interacționează între ele
         * Flux mai flexibil, bazat pe interacțiunea dintre obiecte
 
@@ -35,7 +38,8 @@ Analogie:
     Casa construita -> Obiect
 
 class - cuvantul cheie pentru a defini o clasa in Python
-numele clasei - incepe cu litera mare, iar daca avem mai multe cuvinte fiecare incepe cu litera mare (CamelCase)
+numele clasei - incepe cu litera mare, iar daca avem mai multe cuvinte fiecare incepe cu litera mare
+ (CamelCase)
 
 Sintaxa:
 # Definirea unei clase
@@ -252,3 +256,44 @@ Accesarea atributelor si metodelor:
 
 # elev1 = Elev('Ionescu', 'Marius', 8, 9, 10)
 # print(elev1.calcul())
+
+
+# class Angajat:
+    
+#     def __init__(self, nume, salar):
+#         self.nume = nume
+#         self.salar = salar
+    
+#     def afisare(self):
+#         print(f'Angajat: Nume: {self.nume} | Salar: {self.salar}')
+
+#     def marire_salariu(self):
+#         self.salar= self.salar + 1000   
+
+# a1 = Angajat('Mihai', 7000)
+
+# a1.afisare()
+# a1.marire_salariu()
+# a1.afisare()
+
+
+class Elev:
+
+    def __init__(self, nume, nota):
+        self.nume = nume
+        self.nota = nota
+
+    def afisare(self):
+        print(f"Elev: Nume: {self.nume} | Nota: {self.nota}")
+
+    def trece_Clasa(self):
+        if self.nota >= 5:
+            print('Promovat')
+        else:
+            print('Respins')
+
+a1 = Elev('Mihai', 8)
+a1.afisare()
+a1.trece_Clasa()
+        
+

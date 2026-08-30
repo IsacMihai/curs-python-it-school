@@ -1,7 +1,8 @@
 '''
 Stringuri (șiruri de caractere) în Python
 
-    * Un string este o secvență de caractere delimitată de ghilimele simple ('...'), duble ("...") sau triple (\'\'\'...\'\'\', """...""")
+    * Un string este o secvență de caractere delimitată de ghilimele simple ('...'), duble ("...")
+      sau triple (\'\'\'...\'\'\', """...""")
 
     * Stringurile pot conține orice tip de caractere: litere, cifre, simboluri, spații
 

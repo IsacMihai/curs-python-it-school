@@ -51,12 +51,14 @@ Functie = un bloc de cod reutilizabil care efectuează o anumită sarcină
     - Keyword arguments: argumente transmise explicit după nume, indiferent de poziție.
 
     Reguli:
-        1) Argumentele poziționale (positional arguments) trebuie să apară înaintea celor numite (keyword arguments)
+        1) Argumentele poziționale (positional arguments) trebuie să apară înaintea celor numite 
+        (keyword arguments)
            si sa fie transmise in ordinea parametrilor din definitia functiei.
 
         2) Un parametru poate sa primeasca o singura valoare (fie pozitionala, fie numita).
 
-        3) Parametrii cu valoare implicita (default parameters) trebuie sa fie ultimii in definitia functiei.
+        3) Parametrii cu valoare implicita (default parameters) trebuie sa fie ultimii in definitia 
+        functiei.
 '''
 
 '''
@@ -73,9 +75,11 @@ Functie = un bloc de cod reutilizabil care efectuează o anumită sarcină
     - **kwargs: permite transmiterea unui număr variabil de argumente numite (accesibile ca dicționar).
 
     Reguli:
-        -> *args trebuie sa fie plasat dupa parametrii pozitionali si sa apara inaintea lui **kwargs in definitia functiei.
+        -> *args trebuie sa fie plasat dupa parametrii pozitionali si sa apara inaintea lui **kwargs in
+          definitia functiei.
 
-        -> La apelarea functiei se pot combina argumente pozitionale, keyword arguments, *args si **kwargs respectand ordinea:
+        -> La apelarea functiei se pot combina argumente pozitionale, keyword arguments, *args si
+          **kwargs respectand ordinea:
               - Argumentele pozitionale
               - Argumentele numite (keyword arguments)
               - Valorile din *args
@@ -86,9 +90,9 @@ Functie = un bloc de cod reutilizabil care efectuează o anumită sarcină
 '''
 
 
-def func_basic():
-    print("Salut din funcite!")
-    return [1,2,3]
+# def func_basic():
+#     print("Salut din funcite!")
+#     return [1,2,3]
 
 # var = func_basic()
 # print(var)
@@ -146,32 +150,117 @@ def func_basic():
 # var = var + 1000
 # print(var)
 
-lista_simpla = [1, 2, 3, 4, 5, 1, 7 , 1]
+# lista_simpla = [1, 2, 3, 4, 5, 1, 7 , 1]
 
 
-lista = [1, 2, 3, [1, 3, 5], 6, [1, [1, 2], 3]]
+# lista = [1, 2, 3, [1, 3, 5], 6, [1, [1, 2], 3]]
 
-def fr_nr(lista_in_care_caut, nr_cautat):
-    counter = 0
-    for elem in lista_in_care_caut:
-        if elem == nr_cautat:
-            counter += 1
-        else:
-            pass
+# def fr_nr(lista_in_care_caut, nr_cautat):
+#     counter = 0
+#     for elem in lista_in_care_caut:
+#         if elem == nr_cautat:
+#             counter += 1
+#         else:
+#             pass
 
-    return counter
+#     return counter
 
-def frecventa_nr(lista_in_care_caut, nr_cautat):
-    counter = 0
-    for elem in lista_in_care_caut:
-        if isinstance(elem, list): # type(elem) == list
-            counter += frecventa_nr(elem, nr_cautat)
-        elif elem == nr_cautat:
-            counter += 1
-        else:
-            pass
+# def frecventa_nr(lista_in_care_caut, nr_cautat):
+#     counter = 0
+#     for elem in lista_in_care_caut:
+#         if isinstance(elem, list): # type(elem) == list
+#             counter += frecventa_nr(elem, nr_cautat)
+#         elif elem == nr_cautat:
+#             counter += 1
+#         else:
+#             pass
 
-    return counter
+#     return counter
 
-print(frecventa_nr(lista, 1))
-print(fr_nr(lista, 1))
+# print(frecventa_nr(lista, 1))
+# print(fr_nr(lista, 1))
+
+#Exercitii Gpt
+
+
+# #1.Scrie o funcție care primește un nume și afișează:
+
+# def func_basic(nume):
+#     print(f"Salut, {nume}")
+#     return
+
+# func_basic('Mihai')
+
+#2.Scrie o funcție care primește două numere și returnează suma lor.
+
+# def suma_numere(a, b):
+#     return a + b
+
+
+# rezultat = suma_numere(5, 3)
+# print(rezultat)
+
+# def inmultire_numere(a, b):
+#     return a * b
+
+# rezultat = inmultire_numere(4 ,6)
+# print(rezultat)
+
+#3.Scrie o funcție care primește un număr și returnează:
+
+# def restul_impartirii(x):
+#     if x % 2 == 0:
+#         return 'Par'
+#     if x % 2 == 1:
+#         return 'Impar'
+
+# print(restul_impartirii(5))
+
+#4. Scrie o funcție care primește lungimea și lățimea și returnează aria.
+
+# def aria_dreptunghi(lungime, latime):
+#     return lungime * latime
+
+# rezultat = aria_dreptunghi(5, 3)
+# print(rezultat)
+
+# x = 15
+
+# if x % 3 == 0  and x % 5 == 0:
+#     print('fizzBuzz')
+ 
+# elif x % 5 == 0:
+#     print('buzz')
+
+# elif x % 3 == 0:
+#     print('fizz')
+
+# else:
+#     print('Lets try something else! ')
+
+def aduna(lista_elemente):
+    suma = 0
+    for elem in lista_elemente:
+        suma += elem
+
+    return suma
+
+def produs(lista_elemente):
+    produsul = 1
+    for elem in lista_elemente:
+        produsul *= elem
+
+    return produsul
+
+def suma_liste(func, lista_cu_liste):
+    suma_totala = 0
+    for lista in lista_cu_liste:
+        print(lista)
+        print(func(lista))
+        suma_totala += func(lista)
+
+    return suma_totala
+    
+lista = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+print("Suma sumelor elementelor din lista este: ",suma_liste(aduna, lista))
+print("Suma produselor elementelor din lista este: ",suma_liste(produs, lista))
